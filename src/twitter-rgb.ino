@@ -10,7 +10,7 @@ void loop() {
 }
 
 int setLed(String colors) {
-    Particle.publish("received-request", colors);
+    Particle.publish("received-request", colors, PRIVATE);
     RGB.brightness(255);
     RGB.color(255, 0, 0);
     delay(1000);
